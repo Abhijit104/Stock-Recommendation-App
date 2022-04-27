@@ -11,6 +11,5 @@ ta==0.10.1
 scipy==1.7.1
 pmdarima==1.8.5
 statsmodels==0.12.2
-itertools
 tqdm==4.62.3
 datetime
