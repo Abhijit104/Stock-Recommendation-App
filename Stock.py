@@ -111,12 +111,11 @@ ax.set_ylabel('Numbers of Returns')
 st.pyplot(fig2)
 
 #Moving Average
-st.subheader('Moving Average')
-n=int(st.text_input('Enter Rolling Window',value=30))
+st.subheader('Technical Analysis')
+n=int(st.text_input('Moving Average: Enter Rolling Window',value=30))
 st.line_chart(df['Close'].rolling(window=n).mean().dropna())
 
 # Bollinger Bands
-st.subheader('Bollinger Bands')
 indicator_bb = BollingerBands(df['Close'])
 bb = df.copy()
 bb['bb_h'] = indicator_bb.bollinger_hband()
@@ -124,11 +123,9 @@ bb['bb_l'] = indicator_bb.bollinger_lband()
 bb = bb[['Close','bb_h','bb_l']]
 
 # Moving Average Convergence Divergence
-st.subheader('Moving Average Convergence Divergence')
 macd = MACD(df['Close']).macd()
 
 # Resistence Strength Indicator
-st.subheader('Resistence Strength Indicator')
 rsi = RSIIndicator(df['Close']).rsi()
 
 # Plot the prices and the bolinger bands
