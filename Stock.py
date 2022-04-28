@@ -57,7 +57,7 @@ st.markdown("<h1 style='text-align: center; color: red;'>Some title</h1>", unsaf
 st.subheader('Entered Time Period')
 start_date = st.sidebar.date_input('start date', datetime.date(2019,1,1))
 st.write(start_date)
-end_date = st.sidebar.date_input('end date', datetime.date(2020,1,1))
+end_date = st.sidebar.date_input('end date', pd.to_datetime('today', format='%Y-%m-%d'))
 st.write(end_date)
 
 #stock to analize
