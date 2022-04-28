@@ -68,7 +68,7 @@ df = data.DataReader(tickerSymbol, 'yahoo', start_date, end_date)
 
 #plotting stock
 st.subheader('Candlestick Plot of Stock')
-fig1=ff.create_candlestick(df['Open'],df['High'],df['Low'],df['Close'])
+fig1=ff.create_candlestick(x=df.index,df['Open'],df['High'],df['Low'],df['Close'])
 st.plotly_chart(fig1, use_container_width=True)
 
 # Plot raw data
