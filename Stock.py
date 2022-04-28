@@ -103,7 +103,7 @@ returns = df['Close'].pct_change().dropna()
 
 #return distribution
 st.subheader('Return Distribution Of Stock')
-fig2=plt.figure(figsize=(8,4))
+fig2=plt.figure(figsize=(7,2))
 ax = sns.distplot(returns, color='green', bins=50)
 ax.set_title('Return distribution')
 ax.set_xlabel('Returns')
