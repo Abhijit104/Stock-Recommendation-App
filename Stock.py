@@ -74,11 +74,12 @@ fig1=ff.create_candlestick(df['Open'],df['High'],df['Low'],df['Close'], dates=df
 st.plotly_chart(fig1, use_container_width=True)
 
 # Plot raw data
+st.subheader('Time Series data with Rangeslider')
 def plot_raw_data():
     fig = go.Figure()
     fig.add_trace(go.Scatter(x=df.index, y=df['Open'], name="stock_open"))
     fig.add_trace(go.Scatter(x=df.index, y=df['Close'], name="stock_close"))
-    fig.layout.update(title_text='Time Series data with Rangeslider', xaxis_rangeslider_visible=True)
+    fig.layout.update(title_text='', xaxis_rangeslider_visible=True)
     st.plotly_chart(fig)   
 plot_raw_data()
 
