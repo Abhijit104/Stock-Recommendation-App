@@ -50,11 +50,10 @@ from datetime import date, timedelta
 #import warnings
 #warnings.simplefilter(action='ignore', category=FutureWarning)
 
-st.title('STOCK TECHNICAL ANALYSIS AND FORECASTING')
-st.markdown("<h1 style='text-align: center; color: red;'>Some title</h1>", unsafe_allow_html=True)
+st.title("<h1 style='text-align: center; color: blue;'>STOCK TECHNICAL ANALYSIS AND FORECASTING</h1>", unsafe_allow_html=True)
 
 #Staart and end date
-st.subheader('Entered Time Period')
+st.subheader("<h1 style='text-align: center; color: blue;'>Entered Time Period</h1>", unsafe_allow_html=True)
 start_date = st.sidebar.date_input('start date', datetime.date(2019,1,1))
 st.write(start_date)
 end_date = st.sidebar.date_input('end date', pd.to_datetime('today', format='%Y-%m-%d'))
