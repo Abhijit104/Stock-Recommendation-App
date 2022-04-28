@@ -50,6 +50,9 @@ from datetime import date, timedelta
 #import warnings
 #warnings.simplefilter(action='ignore', category=FutureWarning)
 
+st.title('STOCK TECHNICAL ANALYSIS AND FORECASTING')
+st.markdown("<h1 style='text-align: center; color: red;'>Some title</h1>", unsafe_allow_html=True)
+
 #Staart and end date
 st.subheader('Entered Time Period')
 start_date = st.sidebar.date_input('start date', datetime.date(2019,1,1))
