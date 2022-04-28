@@ -80,7 +80,7 @@ def plot_raw_data():
     fig.add_trace(go.Scatter(x=df.index, y=df['Open'], name="stock_open"))
     fig.add_trace(go.Scatter(x=df.index, y=df['Close'], name="stock_close"))
     fig.layout.update(title_text='', xaxis_rangeslider_visible=True)
-    st.plotly_chart(fig)   
+    st.plotly_chart(fig, use_container_width=True)   
 plot_raw_data()
 
 #Maximum and minimum price and date
@@ -234,7 +234,7 @@ def plot_raw_data():
     fig.add_trace(go.Scatter(x=d.index, y=d['Forecast Close'], name="Forecast"))
     fig.add_trace(go.Scatter(x=c.index, y=df['Close'], name="stock_close"))
     fig.layout.update(title_text='Time Series data with Rangeslider', xaxis_rangeslider_visible=True)
-    st.plotly_chart(fig)   
+    st.plotly_chart(fig, use_container_width=True)   
 plot_raw_data()
 
 
